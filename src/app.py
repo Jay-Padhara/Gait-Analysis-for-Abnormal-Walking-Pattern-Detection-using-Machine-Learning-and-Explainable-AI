@@ -75,7 +75,7 @@ background:linear-gradient(90deg,#0f172a,#1e293b);color:white;text-align:center;
 </div>
 """, unsafe_allow_html=True)
 
-df = pd.read_csv("../data/gait.csv")
+df = pd.read_csv("C:\\Users\\JAY\\OneDrive\\Documents\\Germany\\HS_AALEN\\Visual Analytics\\Project\\Gait_Analysis\\data\\gait.csv")
 
 st.sidebar.title("Filters")
 
