@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import shap
+from pathlib import Path
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
@@ -18,6 +19,9 @@ from sklearn.metrics import (
     recall_score,
     f1_score
 )
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR.parent / "data" / "gait.csv"
 
 st.set_page_config(page_title="Gait Analytics Dashboard", layout="wide")
 
@@ -75,7 +79,8 @@ background:linear-gradient(90deg,#0f172a,#1e293b);color:white;text-align:center;
 </div>
 """, unsafe_allow_html=True)
 
-df = pd.read_csv("../data/gait.csv")
+# df = pd.read_csv("../data/gait.csv")
+df = pd.read_csv(DATA_PATH)
 
 st.sidebar.title("Filters")
 
